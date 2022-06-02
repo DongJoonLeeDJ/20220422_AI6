@@ -1,8 +1,0 @@
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\bin\Debug\CSharpStudy03.exe.config
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\bin\Debug\CSharpStudy03.exe
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\bin\Debug\CSharpStudy03.pdb
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.csproj.AssemblyReference.cache
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.csproj.SuggestedBindingRedirects.cache
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.csproj.CoreCompileInputs.cache
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.exe
-D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy03\obj\Debug\CSharpStudy03.pdb
