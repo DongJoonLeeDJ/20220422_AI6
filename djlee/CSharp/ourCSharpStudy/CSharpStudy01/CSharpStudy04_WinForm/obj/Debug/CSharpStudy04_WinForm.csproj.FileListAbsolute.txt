@@ -1,0 +1,11 @@
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\bin\Debug\CSharpStudy04_WinForm.exe.config
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\bin\Debug\CSharpStudy04_WinForm.exe
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\bin\Debug\CSharpStudy04_WinForm.pdb
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.csproj.AssemblyReference.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.csproj.SuggestedBindingRedirects.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.Properties.Resources.resources
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.csproj.GenerateResource.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.csproj.CoreCompileInputs.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.exe
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.pdb
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy04_WinForm\obj\Debug\CSharpStudy04_WinForm.Form1.resources

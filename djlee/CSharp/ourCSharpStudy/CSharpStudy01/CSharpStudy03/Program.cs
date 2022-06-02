@@ -37,6 +37,13 @@ namespace CSharpStudy03
             Console.WriteLine(num1 * (num2[0]-'0'));
             Console.WriteLine(num1 * mynum2);
 
+            Console.WriteLine("두번째 풀이방식");
+            Console.WriteLine(num1*(mynum2%10));
+            Console.WriteLine(num1*((mynum2/10)%10));
+            Console.WriteLine(num1*(mynum2/100));
+            Console.WriteLine(num1*mynum2);
+
+
 
         }
     }
