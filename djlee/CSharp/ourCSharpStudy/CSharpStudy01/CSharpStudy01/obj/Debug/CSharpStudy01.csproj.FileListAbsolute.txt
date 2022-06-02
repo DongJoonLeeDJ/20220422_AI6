@@ -1,0 +1,8 @@
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\bin\Debug\CSharpStudy01.exe.config
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\bin\Debug\CSharpStudy01.exe
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\bin\Debug\CSharpStudy01.pdb
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\obj\Debug\CSharpStudy01.csproj.AssemblyReference.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\obj\Debug\CSharpStudy01.csproj.SuggestedBindingRedirects.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\obj\Debug\CSharpStudy01.csproj.CoreCompileInputs.cache
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\obj\Debug\CSharpStudy01.exe
+D:\djlee\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy01\CSharpStudy01\obj\Debug\CSharpStudy01.pdb
