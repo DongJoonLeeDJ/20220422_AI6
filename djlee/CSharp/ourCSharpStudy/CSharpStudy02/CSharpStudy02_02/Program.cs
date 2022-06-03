@@ -64,7 +64,7 @@ namespace CSharpStudy02_02
 
 
             //셋다 True
-            Console.WriteLine("안녕하세요".Contains("안녕"));
+            Console.WriteLine("안녕하세요".Contains("안녕"));//안녕 포함됨
             Console.WriteLine("안녕하세요".Equals("안녕하세요"));
             Console.WriteLine("안녕하세요"=="안녕하세요");
         }
