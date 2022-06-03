@@ -90,6 +90,7 @@ namespace CSharpStudy02
             string result = $"aa의 값은 {aa}이고, mbti는 {mbti}다";
             Console.WriteLine(result);
 
+            Console.WriteLine("aaaa");
 
         }
     }
