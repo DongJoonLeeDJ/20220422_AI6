@@ -58,6 +58,8 @@ namespace CSharpStudy03_04
             #endregion
 
 
+            if(false)
+            {
             #region 3,4,5번
             Console.WriteLine();
             Console.WriteLine("출력할 별의 높이 입력하기");
@@ -97,7 +99,76 @@ namespace CSharpStudy03_04
                     Console.Write("*");
                 Console.WriteLine();
             }
+            Console.WriteLine("5번 정답(피라미드)");
+            for(int i = 0; i<floor; i++)
+            {
+                for(int j = floor-i-1; j>0;j--)
+                {
+                    Console.Write(" ");
+                }
+                for(int j = 0; j< 2*i+1; j++)
+                    Console.Write("*");
 
+                Console.WriteLine();
+            }
+
+
+            #endregion
+
+            }
+
+            #region 6번 문제
+
+            Console.WriteLine();
+            Console.WriteLine("6번 문제");
+            int[] mynumbers = new int[7];
+
+            //Contain 이용 하는 법
+            for(int i = 0; i<mynumbers.Length; i++)
+            {
+                Console.WriteLine("숫자 입력하기");
+                int num = int.Parse(Console.ReadLine());
+                if(mynumbers.Contains(num))
+                {
+                    Console.WriteLine("중복!!!");
+                    i--;
+                    continue;
+                }
+                mynumbers[i] = num;
+            }
+            foreach (var item in mynumbers)
+            {
+                Console.WriteLine(item);
+            }
+
+            //직접 체크하는 법
+            mynumbers = new int[7]; //초기화
+
+            for(int i = 0; i<mynumbers.Length; i++)
+            {
+                Console.WriteLine("값 입력");
+                int n = int.Parse(Console.ReadLine());
+                bool isduplicate = false;
+                for (int j = 0; j < i; j++)
+                {
+                    if (mynumbers[j] == n)
+                    {
+                        Console.WriteLine("중복~~~");
+                        isduplicate = true;
+                        i--;
+                        break;
+                    }
+                }
+
+                if (isduplicate == false)
+                    mynumbers[i] = n;
+            }
+
+            foreach (var item in mynumbers)
+                Console.WriteLine(item);
+            {
+
+            }
 
             #endregion
 
