@@ -119,9 +119,14 @@ namespace CSharpStudy03_04
 
             if(false)
             {
-            #region 6번 문제
-
-            Console.WriteLine();
+                #region 6번 문제
+                /*
+                 6. 임의의 숫자 7개를 배열에 집어넣어 보세요.
+단, 중복되면 안 됩니다.
+그리고 다 입력되고 나서는 이 배열의 숫자들을 오름차순 정렬해서
+출력해보세요.
+                 */
+                Console.WriteLine();
             Console.WriteLine("6번 문제");
             int[] mynumbers = new int[7];
 
@@ -175,6 +180,45 @@ namespace CSharpStudy03_04
             #endregion
 
             }
+            Console.WriteLine();
+            Console.WriteLine("7번 문제!!!");
+
+            string start = "1"; //처음 시작하는 값이자 출력되는 값
+            for(int i = 0; i<20; i++)
+            {
+                Console.WriteLine($"{i+1}번째 : {start}");
+                string end = ""; //누적값 저장, 읽어들이는 숫자가
+                //달라지거나 수열이 끝났을 때 그동안
+                //누적된 값을 적거나 누적하는 것
+
+                char num = start[0]; //읽어들이는 숫자
+                int count = 0;//읽어들인 숫자의 개수
+
+                for(int j = 0; j<start.Length; j++)
+                {
+                    if (start[j]!=num)
+                    {
+                        end = end + num + count;
+                        num = start[j];
+                        count = 1;
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+                end = end + num + count;
+                start = end;
+            }
+
+            /* 디버깅 하기*/
+            //ctrl+f5 말고 f5 눌러야 함
+            //숫자 옆에 점 찍거나 해당 라인에 대고 f9 누르기
+            //빨간점 = break point
+            //해당 시점의 값을 마우스 올려놓고 조사하거나
+            //밑에 있는 조사식 이용해서 값을 보면 됨
+            //f5 눌려진 상태에서
+            //디버그->창->조사식->조사식 1~4중 하나 선택하기
 
         }
     }
