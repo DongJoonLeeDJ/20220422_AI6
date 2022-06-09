@@ -15,6 +15,9 @@ namespace CSharpStudy02_03
             //12로 나눴을 때 나머지가 0인 건 원숭이
             //참고로 서기 1년은 닭띠
             int year_thee = year % 12;
+            //참고 : -1989%12 = -9
+            //이런 경우 else로 빠짐
+
             //조건문이 참이라서 수행해야 하는 코드가
             //1줄일 경우엔 중괄호 생략 가능함
             if (year_thee == 0)
@@ -41,6 +44,8 @@ namespace CSharpStudy02_03
                 Console.WriteLine("말");
             else if(year_thee==11)
                 Console.WriteLine("양");
+            else
+                Console.WriteLine("잘못된 값입니다.");//음수등
             //굳이 else 를 꼭 적어야 하는 건 아님
             //그리고 모든 경우의 수를 다 써서 else가 필요 없음
 

@@ -46,6 +46,7 @@ namespace CSharpStudy03_02
             Console.WriteLine("b는?");
             int b = int.Parse(Console.ReadLine());
             Console.WriteLine((a*a) + (b*b));
+
             Console.WriteLine(Math.Pow(a,2)+Math.Pow(b,2));
             Console.WriteLine(Math.Sqrt(Math.Pow(a,2)+Math.Pow(b,2)));
         }
