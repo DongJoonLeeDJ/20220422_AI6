@@ -117,6 +117,8 @@ namespace CSharpStudy03_04
 
             }
 
+            if(false)
+            {
             #region 6번 문제
 
             Console.WriteLine();
@@ -171,6 +173,8 @@ namespace CSharpStudy03_04
             }
 
             #endregion
+
+            }
 
         }
     }
