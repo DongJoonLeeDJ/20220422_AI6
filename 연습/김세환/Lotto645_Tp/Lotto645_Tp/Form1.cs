@@ -55,9 +55,12 @@ namespace Lotto645_Tp
             //InvokeRequired를 사용하는 이유
             if (t.InvokeRequired)
             {
-                //델리게이트 만들기
+                //델리게이트(대리자) 만들기
                 SetTextBoxDelegate d = new SetTextBoxDelegate(SetTextBox);
                 //인보크 시켜줌, 2개의 인자, STB 메소드 호출
+
+                //메인 쓰레드가 대리자한테 대리자가 가지고 있는 메소드를
+                //수행하도록 떠넘김
                 this.Invoke(d, new object[] { t, n });
             }
             else
