@@ -53,7 +53,7 @@ namespace UseAPI
         {
             //https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=1000
 
-            int count = 1000;
+            int count = 1;
             List<Lotto> lottos = new List<Lotto>();
 
             while(true)
