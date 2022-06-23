@@ -73,6 +73,22 @@ namespace CSharpStudy05_02
                 Console.WriteLine(item.Element("wfKor").Value);
             }
 
+            List<Weather> w = new List<Weather>();
+            foreach(var item in xe.Descendants("data"))
+            {
+                Weather temp = new Weather();
+                temp.Name = item.Element("wfKor").Value;
+                temp.Temp = double.Parse(item.Element("temp").Value);
+                w.Add(temp);
+            }
+
+            foreach(var item in w)
+            {
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.Temp);
+            }
+
+
         }
     }
 }
