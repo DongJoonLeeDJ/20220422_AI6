@@ -21,14 +21,14 @@ namespace CSharpStudy05_03
         public Form1()
         {
             InitializeComponent();
-          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string url = "https://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1150061500";
             XElement xe = XElement.Load(url);
-            foreach(var item in xe.Descendants("data"))
+            foreach (var item in xe.Descendants("data"))
             {
                 Weather t = new Weather();
                 t.Name = item.Element("wfKor").Value;
@@ -43,11 +43,11 @@ namespace CSharpStudy05_03
         List<Air> airs = new List<Air>();
         private void button2_Click(object sender, EventArgs e)
         {
-            string url = 
+            string url =
                 "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth?serviceKey=I35xhBVrKuRe7RbiQpN9NOkt%2B6JQT5Fd0fgCNDuB0dURcjnYRTmTeyrFaNHFDHVY%2FQ4etMclK24pY%2FdEMx2fGQ%3D%3D&returnType=xml&numOfRows=100&pageNo=1&searchDate=2022-06-20&InformCode=PM10";
             XElement xe = XElement.Load(url);
 
-            foreach(var item in xe.Descendants("item"))
+            foreach (var item in xe.Descendants("item"))
             {
                 Air a = new Air();
                 a.informData = item.Element("informData").Value;
@@ -67,27 +67,27 @@ namespace CSharpStudy05_03
 
             List<Lotto> lottos = new List<Lotto>();
 
-            while(true)
+            while (true)
             {
-                    var json = 
-                        new WebClient().DownloadString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo="+count);
-                    count++;
-                    var jArray = JObject.Parse(json);
-                    if (jArray["returnValue"].ToString() == "fail")
-                        break;
+                var json =
+                    new WebClient().DownloadString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + count);
+                count++;
+                var jArray = JObject.Parse(json);
+                if (jArray["returnValue"].ToString() == "fail")
+                    break;
 
-                    Lotto l = new Lotto()
-                    {
-                        drwNoDate = jArray["drwNoDate"].ToString(),
-                        totSellamnt = jArray["totSellamnt"].ToString()
-                    };
+                Lotto l = new Lotto()
+                {
+                    drwNoDate = jArray["drwNoDate"].ToString(),
+                    totSellamnt = jArray["totSellamnt"].ToString()
+                };
 
-                    lottos.Add(l);  
+                lottos.Add(l);
             }
             dataGridView3.DataSource = null;
             dataGridView3.DataSource = lottos;
         }
 
-        }
     }
+}
 
