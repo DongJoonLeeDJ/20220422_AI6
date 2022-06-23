@@ -53,7 +53,7 @@ namespace CSharpStudy05
 
             //LINQ
             //SQL문을 사용하여 List에서 내가 원하는 걸 뽑아 낼 수 있다.
-            var myoutput = from item in ex where item % 2 != 0 select item;
+            var myoutput = from ㅁㅁ in ex where ㅁㅁ % 2 != 0 select ㅁㅁ;
             foreach (var item in myoutput)
             {
                 Console.WriteLine(item);
