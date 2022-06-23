@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CSharpStudy05_02
 {
@@ -56,6 +57,21 @@ namespace CSharpStudy05_02
             var output4_2 = from item in input select item.Name + ":" + item.Price;
             foreach(var item in output4_2)
                 Console.WriteLine(item);
+
+            Console.WriteLine("-------------------------------------------");
+
+            string url = "https://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1150061500";
+            XElement xe = XElement.Load(url);
+            Console.WriteLine(xe);
+            Console.WriteLine("-------------------------------------------");
+
+            var xQ = from item in xe.Descendants("data") select item;
+            foreach(var item in xQ)
+            {
+                Console.WriteLine(item.Element("day").Value);
+                Console.WriteLine(item.Element("temp").Value);
+                Console.WriteLine(item.Element("wfKor").Value);
+            }
 
         }
     }
