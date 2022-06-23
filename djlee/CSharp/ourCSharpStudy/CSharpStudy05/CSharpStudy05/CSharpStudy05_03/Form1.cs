@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -59,7 +61,33 @@ namespace CSharpStudy05_03
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=861
+
+            int count = 1000; //1000회차부터 현재까지 출력하기
+
+            List<Lotto> lottos = new List<Lotto>();
+
+            while(true)
+            {
+                    var json = 
+                        new WebClient().DownloadString("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo="+count);
+                    count++;
+                    var jArray = JObject.Parse(json);
+                    if (jArray["returnValue"].ToString() == "fail")
+                        break;
+
+                    Lotto l = new Lotto()
+                    {
+                        drwNoDate = jArray["drwNoDate"].ToString(),
+                        totSellamnt = jArray["totSellamnt"].ToString()
+                    };
+
+                    lottos.Add(l);  
+            }
+            dataGridView3.DataSource = null;
+            dataGridView3.DataSource = lottos;
+        }
 
         }
     }
-}
+
