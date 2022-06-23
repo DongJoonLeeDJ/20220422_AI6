@@ -37,5 +37,29 @@ namespace CSharpStudy05_03
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = w;
         }
+
+        List<Air> airs = new List<Air>();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string url = 
+                "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth?serviceKey=I35xhBVrKuRe7RbiQpN9NOkt%2B6JQT5Fd0fgCNDuB0dURcjnYRTmTeyrFaNHFDHVY%2FQ4etMclK24pY%2FdEMx2fGQ%3D%3D&returnType=xml&numOfRows=100&pageNo=1&searchDate=2022-06-20&InformCode=PM10";
+            XElement xe = XElement.Load(url);
+
+            foreach(var item in xe.Descendants("item"))
+            {
+                Air a = new Air();
+                a.informData = item.Element("informData").Value;
+                a.informGrade = item.Element("informGrade").Value;
+                airs.Add(a);
+            }
+
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = airs;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
