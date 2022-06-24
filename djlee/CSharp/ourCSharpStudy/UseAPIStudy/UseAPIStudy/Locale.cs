@@ -19,8 +19,11 @@ namespace UseAPIStudy
             Lng = lng;
         }
 
+        //Object 클래스(=모든 객체의 조상)의 ToString을 덮어쓰기함(=오버라이드)
+
         public override string ToString()
         {
+            //return base.ToString();
             return Name;
         }
 
