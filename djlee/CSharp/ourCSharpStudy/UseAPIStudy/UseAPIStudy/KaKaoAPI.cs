@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace UseAPIStudy
 {
@@ -32,7 +33,25 @@ namespace UseAPIStudy
 
             string json = reader.ReadToEnd();//응답은 json형태로 응답이 옴
 
+            JavaScriptSerializer js = new JavaScriptSerializer();
 
+
+            //c#의 var = 한 번 자료형이 정해지면 안 바뀜
+            //dynamic = 한 번 자료형이 정해져도 계속 바뀜.
+            //자바스크립트의 var랑 let이 이거랑 똑같은 거
+
+            dynamic dob = js.Deserialize<dynamic>(json);
+            dynamic docs = dob["documents"];
+            object[] buf = docs;
+
+            int length = buf.Length;
+            for(int i = 0; i<length; i++)
+            {
+                string lname = docs[i]["place_name"];
+                double x = double.Parse(docs[i]["x"]);
+                double y = double.Parse(docs[i]["y"]);
+                list.Add(new Locale(lname, x, y));
+            }
             return list;
         }
     }
