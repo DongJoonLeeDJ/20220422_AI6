@@ -78,5 +78,52 @@ namespace ParkingManager
             }
         }
 
+        public static void updateQuery(string parkingSpotText, string carNumber, string driverName, string phoneNumber, bool isRemove)
+        {
+            try
+            {
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                string sqlcommand="";
+
+                if(isRemove) //출차
+                {
+
+                }
+                else
+                {
+                    //파라메터를 @에 실어서 보내는 방식
+                    //sql injection이라는 해킹 공격 방지하는 것
+                    //sql injection(sql삽입공격)은 해킹 공격의 일종
+                    //커멘드에 잘못된 명령어 입력해서 비밀번호 등 탈취하는 기술
+                    //ex : select * from `  <- 이렇게 말도 안 되는 문자를 입력해서
+                    //비밀번호 등 정보 탈취
+                    sqlcommand = "update parkingManager set carnumber=@p1, " +
+                        "drivername=@p2, phonenumber=@p3," +
+                        "parkingtime=@p4 where parkingspot=@p5";
+
+                    cmd.Parameters.AddWithValue("@p1", carNumber);
+                    cmd.Parameters.AddWithValue("@p2", driverName);
+                    cmd.Parameters.AddWithValue("@p3", phoneNumber);
+                    cmd.Parameters.AddWithValue("@p4", 
+                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+                    cmd.Parameters.AddWithValue("@p5", parkingSpotText);
+                }
+                cmd.CommandText = sqlcommand;
+                cmd.ExecuteNonQuery();
+                
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

@@ -73,5 +73,22 @@ namespace ParkingManager
             }
         }
 
+        //주차 및 출차를 할 것
+        public static void Save(string parkingSpotText, string carNumber, 
+            string driverName, string phoneNumber, bool isRemove=false)
+        {
+            try
+            {
+                //update를 하는 데
+                //isRemove 값에 따라서
+                //주차 혹은 출차 상태를 반영할 것
+                DBHelper.updateQuery(parkingSpotText, carNumber, driverName, 
+                    phoneNumber, isRemove);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
 }

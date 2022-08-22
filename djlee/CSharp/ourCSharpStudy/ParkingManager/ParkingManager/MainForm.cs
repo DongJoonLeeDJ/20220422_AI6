@@ -45,7 +45,82 @@ namespace ParkingManager
 
         private void button_parking_Click(object sender, EventArgs e)
         {
-            WriteLog("주차버튼 클릭");
+            //WriteLog("주차버튼 클릭");
+
+            //양 옆의 공백 제거 : Trim
+            if (textBox_parkingSpot.Text.Trim()=="")
+                MessageBox.Show("주차 공간을 입력하세요(주차)");
+            else if(textBox_carNumber.Text.Trim()=="")
+                MessageBox.Show("차량 번호를 입력해주세요.");
+            else
+            {
+                try
+                {
+                    //Single
+                    //괄호 안에 조건을 적고, List에서 해당하는 조건을 갖는
+                    //객체의 위치를 가져오는 것(얕은 복사 Shallow Copy)
+                    ParkingCar car =
+                        DataManager.Cars.Single
+                        (x => x.ParkingSpot.ToString() == textBox_parkingSpot.Text);
+                    //x : Cars 안에 들어 있는 객체들
+
+
+                    //쉽게 정리 : Single 통해서 가져온 객체는, 변경되면, 원본에도 영향준다.
+
+                    if (car.carNumber.Trim() != "")
+                        MessageBox.Show("해당 공간엔 이미 차가 있습니다");
+                    else
+                    {
+                        //car는 Single로 인해 해당 조건이 맞는 객체와 연결됨
+                        //이를 참조개념 내지는 참조변수라고 한다.(참조복사)
+                        //car에 있는 내용 변경시 Cars에 있는 내용이 바뀐다.
+                        car.carNumber = textBox_carNumber.Text;
+                        car.driverName = textBox_driverName.Text;
+                        car.phoneNumber = textBox_phoneNumber.Text;
+                        car.parkingTime = DateTime.Now;
+
+                        dataGridView_parkingManager.DataSource = null;
+                        dataGridView_parkingManager.DataSource = DataManager.Cars;
+
+
+                        //깊은 복사
+                        //복사하고 난 뒤 복사본이 바뀌어도 원본이 영향받지 않음
+                        //int a = 100;
+                        //int b =a;
+                        //b=500; //이렇게 하면 a엔 100, b엔 500이 들어가 있다.
+
+                        //얕은 복사
+                        //복사하고 난 뒤 복사본이 바뀌면 원본이 바뀜
+                        //왜냐면 원본 내용을 복사한 게 아니고 그 원본의 위치를 가져온거라 그렇다.
+                        //Student a = new Student();
+                        //a.hakbeon = 5;
+                        //Student b = a;
+                        //b.hakbeon = 10;
+                        //이럴 경우 a와 b 둘 다 학번값이 10이 된다.
+
+
+                        DataManager.Save
+                            (textBox_parkingSpot.Text, textBox_carNumber.Text,
+                            textBox_driverName.Text, textBox_phoneNumber.Text);
+
+                        string contents = $"주차공간{textBox_parkingSpot.Text}에 " +
+                            $"{textBox_carNumber.Text}차를 주차했습니다.";
+
+                        WriteLog(contents);
+                        MessageBox.Show(contents);
+
+
+                    }
+
+
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"주차 공간 {textBox_parkingSpot.Text}은/는 없습니다.");
+                }
+            }
         }
 
         private void button_remove_Click(object sender, EventArgs e)
