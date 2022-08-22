@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingManager
 {
-    internal class DataManager
+    public class DataManager
     {
     }
 }
