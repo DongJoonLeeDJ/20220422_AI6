@@ -85,6 +85,7 @@
             this.button_remove.TabIndex = 9;
             this.button_remove.Text = "출차";
             this.button_remove.UseVisualStyleBackColor = true;
+            this.button_remove.Click += new System.EventHandler(this.button_remove_Click);
             // 
             // button_parking
             // 
@@ -94,6 +95,7 @@
             this.button_parking.TabIndex = 8;
             this.button_parking.Text = "주차";
             this.button_parking.UseVisualStyleBackColor = true;
+            this.button_parking.Click += new System.EventHandler(this.button_parking_Click);
             // 
             // textBox_phoneNumber
             // 

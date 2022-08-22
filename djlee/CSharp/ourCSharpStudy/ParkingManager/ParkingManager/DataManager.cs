@@ -62,6 +62,10 @@ namespace ParkingManager
             if (di.Exists == false)
                 di.Create();
 
+            //true의 의미
+            //새로 내용 추가시 확장(append)하겠단 의미
+
+            //using : 중괄호 끝나면 해당 메모리 자동 삭제
             using(StreamWriter w = 
                 new StreamWriter("ParkingHistory\\ParkingHistory.txt", true))
             {
