@@ -50,6 +50,7 @@ namespace ParkingManager
                 ConnectDB();
 
                 SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
                 if(parkingSpot==-1) //매개변수 없이 selectQuery 실행
                 {
                     cmd.CommandText = "select * from parkingManager";
@@ -63,7 +64,7 @@ namespace ParkingManager
 
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
-                da.Fill(ds, "parkingManager");
+                da.Fill(ds, "ParkingManager");
                 dt = ds.Tables[0];
 
             }

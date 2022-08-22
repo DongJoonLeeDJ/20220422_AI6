@@ -13,6 +13,7 @@ namespace ParkingManager
             = new List<ParkingCar>();
 
         //정적 생성자
+        //DataManager에 접근하려고 할 때 불러와짐
         //딱 한 번만 불러오고
         //해당 클래스에 접근할 때 자동으로 불러와진다.
         static DataManager()
