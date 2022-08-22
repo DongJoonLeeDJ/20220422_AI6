@@ -125,7 +125,50 @@ namespace ParkingManager
 
         private void button_remove_Click(object sender, EventArgs e)
         {
-            WriteLog("출차버튼 클릭");
+            if (textBox_parkingSpot.Text.Trim() == "")
+                MessageBox.Show("주차 공간을 입력하세요(출차)");
+            else
+            {
+                try
+                {
+                    ParkingCar car =
+                        DataManager.Cars.Single
+                        (x => x.ParkingSpot.ToString() == textBox_parkingSpot.Text);
+
+                    if (car.carNumber.Trim() == "")
+                        MessageBox.Show("해당 공간엔 아직 차가 없습니다.");
+                    else
+                    {
+                        string oldCar = car.carNumber; //기존 차
+                        car.carNumber = "";
+                        car.driverName = "";
+                        car.phoneNumber = "";
+                        car.parkingTime = new DateTime();
+
+                        dataGridView_parkingManager.DataSource = null;
+                        dataGridView_parkingManager.DataSource = DataManager.Cars;
+
+                        DataManager.Save
+                            (textBox_parkingSpot.Text, "", "", "",true);
+
+                        string contents = $"주차공간{textBox_parkingSpot.Text}에 " +
+                            $"{oldCar}차를 출차했습니다.";
+
+                        WriteLog(contents);
+                        MessageBox.Show(contents);
+
+
+                    }
+
+
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"주차 공간 {textBox_parkingSpot.Text}은/는 없습니다.");
+                }
+            }
         }
         private void WriteLog(string contents)
         {

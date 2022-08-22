@@ -90,7 +90,9 @@ namespace ParkingManager
 
                 if(isRemove) //출차
                 {
-
+                    sqlcommand = "update parkingmanager set carnumber='', " +
+                        "drivername='', phonenumber='', parkingtime=null where parkingspot=@p1";
+                    cmd.Parameters.AddWithValue("@p1", parkingSpotText);
                 }
                 else
                 {
