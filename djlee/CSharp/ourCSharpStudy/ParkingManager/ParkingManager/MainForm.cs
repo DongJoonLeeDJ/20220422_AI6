@@ -59,7 +59,29 @@ namespace ParkingManager
             string logContents
                 = $"[{DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss")}]{contents}";
             DataManager.printLog(logContents);
-            listBox_log.Items.Insert(0, logContents);
+            //listBox_log.Items.Add(logContents); //최신 내용이 아래로
+            listBox_log.Items.Insert(0, logContents); //최신내용이 위로
+            //참고로 텍스트 파일은 어차피 최신 내용이 맨 아래로 가있다...
+        }
+
+        private void dataGridView_parkingManager_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //내가 클릭한 행(=row)의 데이터들을
+                //ParkingCar로 형변환한 것(as = 형변환 키워드)
+                ParkingCar car 
+                    = dataGridView_parkingManager.CurrentRow.DataBoundItem as ParkingCar;
+                textBox_parkingSpot.Text = car.ParkingSpot.ToString();
+                textBox_carNumber.Text = car.carNumber;
+                textBox_driverName.Text = car.driverName;
+                textBox_phoneNumber.Text = car.phoneNumber;
+
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
