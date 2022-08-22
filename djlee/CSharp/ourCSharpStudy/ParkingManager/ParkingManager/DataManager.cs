@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,23 @@ namespace ParkingManager
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
                // throw;
+            }
+        }
+
+        //ParkingHistory 폴더의 ParkingHistory 텍스트 파일에
+        //내용을 적는 메소드
+        public static void printLog(string contents)
+        {
+            DirectoryInfo di = new DirectoryInfo("ParkingHistory");
+
+            //해당 폴더가 없을 때 새로 만든다는 의미
+            if (di.Exists == false)
+                di.Create();
+
+            using(StreamWriter w = 
+                new StreamWriter("ParkingHistory\\ParkingHistory.txt", true))
+            {
+                w.WriteLine(contents);
             }
         }
 
