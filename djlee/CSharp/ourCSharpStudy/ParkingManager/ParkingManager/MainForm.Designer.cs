@@ -30,42 +30,42 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_remove = new System.Windows.Forms.Button();
+            this.button_parking = new System.Windows.Forms.Button();
+            this.textBox_phoneNumber = new System.Windows.Forms.TextBox();
+            this.textBox_driverName = new System.Windows.Forms.TextBox();
+            this.textBox_carNumber = new System.Windows.Forms.TextBox();
+            this.textBox_parkingSpot = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button_refresh = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.button_add = new System.Windows.Forms.Button();
+            this.button_find = new System.Windows.Forms.Button();
+            this.textBox_findNum = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dataGridView_parkingManager = new System.Windows.Forms.DataGridView();
+            this.listBox_log = new System.Windows.Forms.ListBox();
             this.label_now = new System.Windows.Forms.Label();
             this.timer_now = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parkingManager)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.button_remove);
+            this.groupBox1.Controls.Add(this.button_parking);
+            this.groupBox1.Controls.Add(this.textBox_phoneNumber);
+            this.groupBox1.Controls.Add(this.textBox_driverName);
+            this.groupBox1.Controls.Add(this.textBox_carNumber);
+            this.groupBox1.Controls.Add(this.textBox_parkingSpot);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -77,51 +77,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "주차/출차";
             // 
-            // button2
+            // button_remove
             // 
-            this.button2.Location = new System.Drawing.Point(199, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "출차";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_remove.Location = new System.Drawing.Point(199, 48);
+            this.button_remove.Name = "button_remove";
+            this.button_remove.Size = new System.Drawing.Size(75, 23);
+            this.button_remove.TabIndex = 9;
+            this.button_remove.Text = "출차";
+            this.button_remove.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // button_parking
             // 
-            this.button1.Location = new System.Drawing.Point(199, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "주차";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_parking.Location = new System.Drawing.Point(199, 15);
+            this.button_parking.Name = "button_parking";
+            this.button_parking.Size = new System.Drawing.Size(75, 23);
+            this.button_parking.TabIndex = 8;
+            this.button_parking.Text = "주차";
+            this.button_parking.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // textBox_phoneNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(81, 99);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 21);
-            this.textBox4.TabIndex = 7;
+            this.textBox_phoneNumber.Location = new System.Drawing.Point(81, 99);
+            this.textBox_phoneNumber.Name = "textBox_phoneNumber";
+            this.textBox_phoneNumber.Size = new System.Drawing.Size(100, 21);
+            this.textBox_phoneNumber.TabIndex = 7;
             // 
-            // textBox3
+            // textBox_driverName
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 6;
+            this.textBox_driverName.Location = new System.Drawing.Point(81, 72);
+            this.textBox_driverName.Name = "textBox_driverName";
+            this.textBox_driverName.Size = new System.Drawing.Size(100, 21);
+            this.textBox_driverName.TabIndex = 6;
             // 
-            // textBox2
+            // textBox_carNumber
             // 
-            this.textBox2.Location = new System.Drawing.Point(80, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 5;
+            this.textBox_carNumber.Location = new System.Drawing.Point(80, 48);
+            this.textBox_carNumber.Name = "textBox_carNumber";
+            this.textBox_carNumber.Size = new System.Drawing.Size(100, 21);
+            this.textBox_carNumber.TabIndex = 5;
             // 
-            // textBox1
+            // textBox_parkingSpot
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 4;
+            this.textBox_parkingSpot.Location = new System.Drawing.Point(81, 18);
+            this.textBox_parkingSpot.Name = "textBox_parkingSpot";
+            this.textBox_parkingSpot.Size = new System.Drawing.Size(100, 21);
+            this.textBox_parkingSpot.TabIndex = 4;
             // 
             // label5
             // 
@@ -161,11 +161,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.button_refresh);
+            this.groupBox2.Controls.Add(this.button_delete);
+            this.groupBox2.Controls.Add(this.button_add);
+            this.groupBox2.Controls.Add(this.button_find);
+            this.groupBox2.Controls.Add(this.textBox_findNum);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(349, 14);
             this.groupBox2.Name = "groupBox2";
@@ -174,48 +174,48 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "주차 공간 현황 관리";
             // 
-            // button6
+            // button_refresh
             // 
-            this.button6.Location = new System.Drawing.Point(171, 108);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "전체 갱신";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_refresh.Location = new System.Drawing.Point(171, 108);
+            this.button_refresh.Name = "button_refresh";
+            this.button_refresh.Size = new System.Drawing.Size(75, 23);
+            this.button_refresh.TabIndex = 13;
+            this.button_refresh.Text = "전체 갱신";
+            this.button_refresh.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button_delete
             // 
-            this.button5.Location = new System.Drawing.Point(171, 79);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "공간 삭제";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_delete.Location = new System.Drawing.Point(171, 79);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(75, 23);
+            this.button_delete.TabIndex = 12;
+            this.button_delete.Text = "공간 삭제";
+            this.button_delete.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // button_add
             // 
-            this.button4.Location = new System.Drawing.Point(171, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "공간 추가";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_add.Location = new System.Drawing.Point(171, 50);
+            this.button_add.Name = "button_add";
+            this.button_add.Size = new System.Drawing.Size(75, 23);
+            this.button_add.TabIndex = 11;
+            this.button_add.Text = "공간 추가";
+            this.button_add.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button_find
             // 
-            this.button3.Location = new System.Drawing.Point(171, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "공간 조회";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_find.Location = new System.Drawing.Point(171, 21);
+            this.button_find.Name = "button_find";
+            this.button_find.Size = new System.Drawing.Size(75, 23);
+            this.button_find.TabIndex = 10;
+            this.button_find.Text = "공간 조회";
+            this.button_find.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // textBox_findNum
             // 
-            this.textBox5.Location = new System.Drawing.Point(65, 23);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 21);
-            this.textBox5.TabIndex = 10;
+            this.textBox_findNum.Location = new System.Drawing.Point(65, 23);
+            this.textBox_findNum.Name = "textBox_findNum";
+            this.textBox_findNum.Size = new System.Drawing.Size(100, 21);
+            this.textBox_findNum.TabIndex = 10;
             // 
             // label6
             // 
@@ -228,7 +228,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dataGridView_parkingManager);
             this.groupBox3.Location = new System.Drawing.Point(13, 195);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(660, 222);
@@ -236,23 +236,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "주차 현황";
             // 
-            // dataGridView1
+            // dataGridView_parkingManager
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 195);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_parkingManager.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_parkingManager.Location = new System.Drawing.Point(7, 21);
+            this.dataGridView_parkingManager.Name = "dataGridView_parkingManager";
+            this.dataGridView_parkingManager.RowTemplate.Height = 23;
+            this.dataGridView_parkingManager.Size = new System.Drawing.Size(647, 195);
+            this.dataGridView_parkingManager.TabIndex = 0;
             // 
-            // listBox1
+            // listBox_log
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(13, 423);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(654, 76);
-            this.listBox1.TabIndex = 3;
+            this.listBox_log.FormattingEnabled = true;
+            this.listBox_log.ItemHeight = 12;
+            this.listBox_log.Location = new System.Drawing.Point(13, 423);
+            this.listBox_log.Name = "listBox_log";
+            this.listBox_log.Size = new System.Drawing.Size(654, 76);
+            this.listBox_log.TabIndex = 3;
             // 
             // label_now
             // 
@@ -275,7 +275,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 539);
             this.Controls.Add(this.label_now);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBox_log);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -286,7 +286,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_parkingManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,26 +295,26 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_remove;
+        private System.Windows.Forms.Button button_parking;
+        private System.Windows.Forms.TextBox textBox_phoneNumber;
+        private System.Windows.Forms.TextBox textBox_driverName;
+        private System.Windows.Forms.TextBox textBox_carNumber;
+        private System.Windows.Forms.TextBox textBox_parkingSpot;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button_refresh;
+        private System.Windows.Forms.Button button_delete;
+        private System.Windows.Forms.Button button_add;
+        private System.Windows.Forms.Button button_find;
+        private System.Windows.Forms.TextBox textBox_findNum;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView dataGridView_parkingManager;
+        private System.Windows.Forms.ListBox listBox_log;
         private System.Windows.Forms.Label label_now;
         private System.Windows.Forms.Timer timer_now;
     }
