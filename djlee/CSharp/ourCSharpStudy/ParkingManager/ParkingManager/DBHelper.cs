@@ -27,5 +27,55 @@ namespace ParkingManager
         public static DataSet ds;
         public static DataTable dt;
 
+        //DB 연결하는 부분
+        public static void ConnectDB()
+        {
+            conn.ConnectionString =
+                string.Format("Data Source=({0}); "
+                + "initial Catalog = {1};" +
+                "integrated Secuirty = {2};" +
+                "Timeout=3",
+                "local", "MYDB", "SSPI");
+            conn=new SqlConnection(conn.ConnectionString);
+            conn.Open();
+        }
+
+
+        //selectQuery(); <- 이런식으로 괄호 안에 아무 것도 안 적으면
+        //자동으로 parkingSpot 매개변수에 -1이 들어간다는 뜻
+        public static void selectQuery(int parkingSpot=-1)
+        {
+            try
+            {
+                ConnectDB();
+
+                SqlCommand cmd = new SqlCommand();
+                if(parkingSpot==-1) //매개변수 없이 selectQuery 실행
+                {
+                    cmd.CommandText = "select * from parkingManager";
+                } 
+                else //그게 아닌 경우는 특정 주차 공간 번호의 정보 조회
+                {
+                    cmd.CommandText = "select * from parkingManager " +
+                        " where parkingSpot = " 
+                        + parkingSpot;
+                }
+
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds, "parkingManager");
+                dt = ds.Tables[0];
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return;
+            } finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
