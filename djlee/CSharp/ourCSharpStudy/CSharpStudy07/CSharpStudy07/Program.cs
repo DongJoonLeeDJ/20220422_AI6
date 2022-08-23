@@ -128,7 +128,7 @@ namespace CSharpStudy07
 
             //RemoveAt 이용
             //보통 뭔가를 삭제할 땐 역for문쓴다.
-            for(int i = mydogs.Count-1; i>0; i--)
+            for(int i = mydogs.Count-1; i>=0; i--)
             {
                 if (mydogs[i].age==n)
                 {
