@@ -21,5 +21,19 @@ namespace CSharpStudy07_02
         {
             new Form1().ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cat c = new Cat();
+            c.name = textBox1.Text;
+            int.TryParse(textBox2.Text, out int age);
+            c.age = age;
+
+            c.meow();
+            string message = c.eat();
+            MessageBox.Show(message);
+
+            Cat.jump();
+        }
     }
 }
