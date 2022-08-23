@@ -90,5 +90,59 @@ namespace ParkingManager
 
             }
         }
+
+        public static bool Save(string command, string parkingSpot, out string contents)
+        {
+            DBHelper.selectQuery(int.Parse(parkingSpot));
+
+            if(command=="insert")
+            {
+                //ref = reference
+                //contents 변수의 위치(메모리 상에서 어디있는지)
+                //DBInsert나 DBDelete 안에서 contents 값 변경하면
+                //실제로 변경이 됨. out키워드랑 유사함
+                //out키워드는 값을 바꾸는 것에 초점을 맞췄다면
+                //ref는 이 변수의 위치(=주솟값)를 전달하는 것에 초점을 맞춤
+
+                //엄밀하게 따지면 주솟값이 아니고 참조값임. 왜냐면
+                //C 말고 C#이나 Java에서는 주소 개념이 없다(간접적으론 있지만...
+                //포인터 문법처럼 주소를 쓰거나 그러진 않음)
+                return DBInsert(parkingSpot, ref contents);
+            }
+            else
+            {
+                return DBDelete(parkingSpot, ref contents);
+            }
+        }
+
+        private static bool DBDelete(string parkingSpot, ref string contents)
+        {
+            if (DBHelper.dt.Rows.Count == 0) //해당 공간이 없는 경우
+            {
+                DBHelper.insertQuery(parkingSpot);
+                contents = $"주차공간 {parkingSpot}이/가 추가되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = "해당 주차 공간이 이미 존재합니다.";
+                return false;
+            }
+        }
+
+        private static bool DBInsert(string parkingSpot, ref string contents)
+        {
+            if (DBHelper.dt.Rows.Count == 0) //해당 공간이 없는 경우
+            {
+                DBHelper.insertQuery(parkingSpot);
+                contents = $"주차공간 {parkingSpot}이/가 추가되었습니다.";
+                return true;
+            }
+            else
+            {
+                contents = "해당 주차 공간이 이미 존재합니다.";
+                return false;
+            }
+        }
     }
 }
