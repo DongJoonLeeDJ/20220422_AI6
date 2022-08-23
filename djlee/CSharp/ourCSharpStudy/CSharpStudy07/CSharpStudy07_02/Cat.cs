@@ -17,6 +17,10 @@ namespace CSharpStudy07_02
             System.Windows.Forms.MessageBox.Show
                 (name+"가 야옹한다.");
         }
+
+        //return 값이 string
+        //여기에서 만든 값이 이 메소드를 호출한 곳으로
+        //대입이 된다.
         public string eat()
         {
             return name + "야옹이가 " + age + "살에 걸맞게 먹는다.";
