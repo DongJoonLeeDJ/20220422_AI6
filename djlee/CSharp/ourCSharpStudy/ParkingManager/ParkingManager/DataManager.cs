@@ -94,7 +94,8 @@ namespace ParkingManager
         public static bool Save(string command, string parkingSpot, out string contents)
         {
             DBHelper.selectQuery(int.Parse(parkingSpot));
-
+            contents = ""; //out키워드의 특징
+            //메소드에서 반드시 해당 변수의 값을 지정해야 함!!!
             if(command=="insert")
             {
                 //ref = reference
@@ -117,15 +118,15 @@ namespace ParkingManager
 
         private static bool DBDelete(string parkingSpot, ref string contents)
         {
-            if (DBHelper.dt.Rows.Count == 0) //해당 공간이 없는 경우
+            if (DBHelper.dt.Rows.Count != 0) //해당 공간이 있는 경우
             {
-                DBHelper.insertQuery(parkingSpot);
-                contents = $"주차공간 {parkingSpot}이/가 추가되었습니다.";
+                DBHelper.deleteQuery(parkingSpot);
+                contents = $"주차공간 {parkingSpot}이/가 삭제되었습니다.";
                 return true;
             }
             else
             {
-                contents = "해당 주차 공간이 이미 존재합니다.";
+                contents = "해당 주차 공간이 아직 없습니다.";
                 return false;
             }
         }
