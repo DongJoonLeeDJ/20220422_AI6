@@ -49,6 +49,12 @@ namespace CSharpStudy07
             d2.beonho = "1997";
             d2.code = "chiwawa";
 
+            //인스턴스 별로 메소드 호출 결과가 다르다.
+            //이렇게 인스턴스 별로 호출하는 것을 인스턴스 메소드라고 함
+            //인스턴스 변수처럼 static 키워드 없이 만든다.
+            d.sleep();
+            d2.sleep();
+
 
             Dog.species = "반려견";
 
