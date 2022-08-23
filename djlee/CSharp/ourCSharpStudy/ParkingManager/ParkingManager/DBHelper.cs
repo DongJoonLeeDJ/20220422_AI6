@@ -142,7 +142,13 @@ namespace ParkingManager
             }
             try
             {
-
+                ConnectDB();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@p1", parkingSpot);
+                cmd.CommandText = sqlcommand;
+                cmd.ExecuteNonQuery();
             }
             catch (Exception)
             {
@@ -150,7 +156,7 @@ namespace ParkingManager
             }
             finally
             {
-
+                conn.Close();
             }
         }
 
