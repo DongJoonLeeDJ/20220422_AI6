@@ -201,5 +201,34 @@ namespace ParkingManager
 
             }
         }
+
+        //Cars 리스트에서 매개변수인 parkingSpot에 해당하는
+        //공간 정보 찾아내는 것
+        //Single 말고 foreach문으로 찾아내는 것
+        private string lookUpParkingSpot(int parkingSpot)
+        {
+            string parkedCarNum = ""; //주차된 차 넘버
+            try
+            {
+                foreach (var item in DataManager.Cars)
+                {
+                    if(item.ParkingSpot==parkingSpot)
+                    {
+                        parkedCarNum = item.carNumber;
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            return parkedCarNum; //해당 공간에 차가 없으면 ""을 반환할 것
+        }
+
+        private void button_find_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

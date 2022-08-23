@@ -211,6 +211,7 @@
             this.button_find.TabIndex = 10;
             this.button_find.Text = "공간 조회";
             this.button_find.UseVisualStyleBackColor = true;
+            this.button_find.Click += new System.EventHandler(this.button_find_Click);
             // 
             // textBox_findNum
             // 
