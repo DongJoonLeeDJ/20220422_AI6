@@ -1,0 +1,21 @@
+Console.WriteLine  - 출력
+Console.WriteLine("Hello World");
+
+Console.ReadLine()  - 입력(string)
+string ex = Console.ReadLine();
+
+int.Parse 이런 걸 이용하면 숫자도 입력가능
+int num = int.Parse(Console.ReadLine());
+
+1. 숫자만 저장하는 리스트에 값을 추가해볼 것
+(Console.ReadLine() 이용)
+
+2. dogs에도 개 1마리 추가해보기(Console.ReadLine이용)
+
+3. 입력한 숫자만 삭제해보기(Remove 기능)
+
+4. 입력한 나이의 개만 삭제해보기
+(Remove를 써도 되는 데, RemoveAt도 가능)
+
+5. numbers랑 dogs 출력해보기
+(foreach문쓰기) 

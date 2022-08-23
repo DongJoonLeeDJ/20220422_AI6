@@ -58,7 +58,6 @@ namespace CSharpStudy07
 
             //여러 개의 숫자를 저장하는 List
             List<int> numbers = new List<int>();
-
             numbers.Add(10);
             numbers.Add(5);
             numbers.Add(7);
@@ -72,6 +71,82 @@ namespace CSharpStudy07
             dogs[2].name = "부스";
             dogs[2].beonho = "1989";
             dogs[2].code = "mix";
+
+
+
+            //1. 숫자만 저장하는 리스트에 값 추가하기
+            List<int> mynumbers = new List<int>();
+            mynumbers.Add(10);
+            mynumbers.Add(5);
+            mynumbers.Add(7);
+            //cw tab tab
+            Console.WriteLine("숫자 하나 입력해요.");
+            int num = int.Parse(Console.ReadLine());
+            mynumbers.Add(num);
+            foreach (var item in mynumbers)
+            {
+                Console.WriteLine(item); //mynumbers에 
+                //있는 것들 모두 출력
+            }
+
+            List<Dog> mydogs = new List<Dog>();
+            Dog md = new Dog();
+            md.age = 5;
+            md.name = "멍멍이";
+            md.beonho = "01";
+            md.code = "m01";
+            mydogs.Add(md);
+
+            mydogs.Add(new Dog() {age=10,name="뽀삐",
+                beonho="02",code="b02" });
+
+            //2. 개 추가하기
+            Console.WriteLine("개 이름?");
+            string name = Console.ReadLine();
+            Console.WriteLine("개 나이?");
+            int dog_age = int.Parse(Console.ReadLine());
+            Console.WriteLine("개 번호?");
+            string dognum = Console.ReadLine();
+            Console.WriteLine("개의 코드?");
+            string dog_code = Console.ReadLine();
+
+            Dog temp = new Dog();
+            temp.name = name;
+            temp.age = dog_age;
+            temp.beonho = dognum;
+            temp.code = dog_code;
+            mydogs.Add(temp);
+
+            //3. 입력한 숫자 삭제하기
+            Console.WriteLine("삭제하고 싶은 숫자 입력해");
+            int n = int.Parse(Console.ReadLine());
+            mynumbers.Remove(n);
+
+            //4. 입력한 나이의 개 삭제하기
+            Console.WriteLine("삭제 하고 싶은 나이?");
+            n = int.Parse(Console.ReadLine());
+
+            //RemoveAt 이용
+            //보통 뭔가를 삭제할 땐 역for문쓴다.
+            for(int i = mydogs.Count-1; i>0; i--)
+            {
+                if (mydogs[i].age==n)
+                {
+                    mydogs.RemoveAt(i);
+                }
+            }
+            Console.WriteLine("또 다른 나이 입력");
+            n = int.Parse(Console.ReadLine());
+            //Remove 이용하기
+            for (int i = mydogs.Count - 1; i > 0; i--)
+            {
+                if (mydogs[i].age == n)
+                {
+                    Dog t = mydogs[i];
+                    mydogs.Remove(t);
+                }
+            }
+
 
 
         }
