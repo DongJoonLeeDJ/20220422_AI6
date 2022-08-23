@@ -43,6 +43,37 @@ namespace CSharpStudy07
             d2.beonho = "1997";
             d2.code = "chiwawa";
 
+
+            Dog.species = "반려견";
+
+            //인스턴스 변수
+            //d와 d2에 들어가있는 값이 다를 수 있다.
+            //d의 age와 d2의 age가 다르듯이 말이다.
+
+            //클래스 변수
+            //모든 클래스가 다 같은 값을 가짐
+            //즉 여기선 Dog의 species 값을 모두
+            //공유한다. 공통된 값이다.
+
+
+            //여러 개의 숫자를 저장하는 List
+            List<int> numbers = new List<int>();
+
+            numbers.Add(10);
+            numbers.Add(5);
+            numbers.Add(7);
+
+            //여러 개의 Dog를 저장하는 List
+            List<Dog> dogs = new List<Dog>();
+            dogs.Add(d);
+            dogs.Add(d2);
+            dogs.Add(new Dog());
+            dogs[2].age = 20;
+            dogs[2].name = "부스";
+            dogs[2].beonho = "1989";
+            dogs[2].code = "mix";
+
+
         }
     }
 }
