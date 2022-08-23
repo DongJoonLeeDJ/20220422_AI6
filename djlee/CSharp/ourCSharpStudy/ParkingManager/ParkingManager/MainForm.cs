@@ -256,5 +256,14 @@ namespace ParkingManager
                 MessageBox.Show(ex.Message);
             }
         }
+
+        //db에서 다시 읽어오는 것
+        private void button_refresh_Click(object sender, EventArgs e)
+        {
+            DataManager.Load();
+            dataGridView_parkingManager.DataSource = null;
+            if (DataManager.Cars.Count > 0)
+                dataGridView_parkingManager.DataSource = DataManager.Cars;
+        }
     }
 }
