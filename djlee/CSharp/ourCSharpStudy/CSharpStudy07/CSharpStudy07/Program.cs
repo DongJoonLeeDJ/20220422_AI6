@@ -164,7 +164,7 @@ namespace CSharpStudy07
                     mydogs.Remove(tt);
                 }
             }
-
+            // numbers랑 dogs 출력해보기
             foreach (var item in mynumbers)
             {
                 Console.WriteLine(item);
