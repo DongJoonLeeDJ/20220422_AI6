@@ -10,6 +10,12 @@ namespace CSharpStudy07
     {
         static void Main(string[] args)
         {
+            Dog ddd = new Dog();
+            ddd.name = "컹컹";
+            ddd.bark();
+
+
+
             Student s = new Student();
             //s.score = -1;
             //이에 대한 예외처리를 밖에서 해줘야 함

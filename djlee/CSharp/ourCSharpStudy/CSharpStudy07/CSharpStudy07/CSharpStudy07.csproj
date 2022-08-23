@@ -47,6 +47,7 @@
     <Compile Include="Character.cs" />
     <Compile Include="Dog.cs" />
     <Compile Include="Dog2.cs" />
+    <Compile Include="Dog3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
