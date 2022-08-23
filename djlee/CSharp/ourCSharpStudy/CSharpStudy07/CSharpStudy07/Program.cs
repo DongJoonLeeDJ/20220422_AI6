@@ -123,7 +123,7 @@ namespace CSharpStudy07
             mynumbers.Remove(n);
 
             //4. 입력한 나이의 개 삭제하기
-            Console.WriteLine("삭제 하고 싶은 나이?");
+            Console.WriteLine("삭제 하고 싶은 개 나이?");
             n = int.Parse(Console.ReadLine());
 
             //RemoveAt 이용
@@ -135,7 +135,7 @@ namespace CSharpStudy07
                     mydogs.RemoveAt(i);
                 }
             }
-            Console.WriteLine("또 다른 나이 입력");
+            Console.WriteLine("또 다른 개 나이 입력");
             n = int.Parse(Console.ReadLine());
             //Remove 이용하기
             for (int i = mydogs.Count - 1; i > 0; i--)
@@ -145,6 +145,17 @@ namespace CSharpStudy07
                     Dog t = mydogs[i];
                     mydogs.Remove(t);
                 }
+            }
+
+            foreach (var item in mynumbers)
+            {
+                Console.WriteLine(item);
+            }
+            foreach (var item in mydogs)
+            {
+                Dog mydog = item as Dog;
+                Console.WriteLine
+                    (mydog.name+"_"+mydog.age);
             }
 
 
