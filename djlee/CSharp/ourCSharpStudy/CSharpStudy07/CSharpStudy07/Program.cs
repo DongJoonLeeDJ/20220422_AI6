@@ -138,7 +138,9 @@ namespace CSharpStudy07
             Console.WriteLine("또 다른 개 나이 입력");
             n = int.Parse(Console.ReadLine());
             //Remove 이용하기
-            for (int i = mydogs.Count - 1; i > 0; i--)
+            //역 for문으로 삭제해야 함!
+            //i값은 길이-1부터 i>=0까지 여야 함
+            for (int i = mydogs.Count - 1; i >= 0; i--)
             {
                 if (mydogs[i].age == n)
                 {
