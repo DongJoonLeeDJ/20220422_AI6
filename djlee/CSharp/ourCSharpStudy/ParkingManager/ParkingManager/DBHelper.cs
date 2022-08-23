@@ -127,5 +127,41 @@ namespace ParkingManager
                 conn.Close();
             }
         }
+
+        //insert, delete용
+        public static void executeQuery(string parkingSpot, string command)
+        {
+            string sqlcommand = "";
+            if(command == "insert")
+            {
+                sqlcommand = "insert into parkingManager(parkingSpot) values (@p1)";
+            }
+            else
+            {
+                sqlcommand = "delete from parkingManager where parkingSpot= @p1";
+            }
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+
+            }
+        }
+
+        public static void deleteQuery(string parkingSpot)
+        {
+            executeQuery(parkingSpot, "delete");
+        }
+
+        public static void insertQuery(string parkingSpot)
+        {
+            executeQuery(parkingSpot, "insert");
+        }
     }
 }
