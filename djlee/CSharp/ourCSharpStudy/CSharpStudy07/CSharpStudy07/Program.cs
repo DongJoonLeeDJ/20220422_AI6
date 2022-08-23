@@ -120,6 +120,9 @@ namespace CSharpStudy07
             //3. 입력한 숫자 삭제하기
             Console.WriteLine("삭제하고 싶은 숫자 입력해");
             int n = int.Parse(Console.ReadLine());
+            //mynumbers에 있는 숫자들 중
+            //n에 해당하는 숫자들 중
+            //1개를 제거함
             mynumbers.Remove(n);
 
             //4. 입력한 나이의 개 삭제하기
@@ -132,7 +135,7 @@ namespace CSharpStudy07
             {
                 if (mydogs[i].age==n)
                 {
-                    mydogs.RemoveAt(i);
+                    mydogs.RemoveAt(i);//지우고자 하는 것의 인덱스
                 }
             }
             Console.WriteLine("또 다른 개 나이 입력");
@@ -144,8 +147,21 @@ namespace CSharpStudy07
             {
                 if (mydogs[i].age == n)
                 {
+                    //변수 t가 mydogs의 i번째를 가리킴
+                    //즉 변수 t는 mydogs의 i번째랑 완전히
+                    //동일하다.
                     Dog t = mydogs[i];
+                    //Remove는 해당 객체를 직접 적어야 함
                     mydogs.Remove(t);
+
+                    //만약 new 키워드 이용해서 인스턴스를
+                    //만들고 그걸 대입했다면 삭제가 안 됨
+                    Dog tt = new Dog(); //새로 만든 Dog
+                    tt.age = mydogs[i].age;
+                    tt.name = mydogs[i].name;
+                    tt.beonho = mydogs[i].beonho;
+                    tt.code = mydogs[i].code;
+                    mydogs.Remove(tt);
                 }
             }
 
