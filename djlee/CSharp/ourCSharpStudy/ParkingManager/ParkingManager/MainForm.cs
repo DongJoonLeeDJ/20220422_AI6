@@ -26,6 +26,7 @@ namespace ParkingManager
                 textBox_driverName.Text = DataManager.Cars[0].driverName;
                 textBox_phoneNumber.Text = DataManager.Cars[0].phoneNumber;
 
+                textBox_findNum.Text = textBox_parkingSpot.Text;
 
             }
             catch (Exception)
