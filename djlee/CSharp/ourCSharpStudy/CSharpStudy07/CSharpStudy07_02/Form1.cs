@@ -26,6 +26,8 @@ namespace CSharpStudy07_02
         {
             Cat c = new Cat();
             c.name = textBox1.Text;
+            //숫자 아니어도 됨
+            //대신 숫자 아닌 값 입력시 age에는 0이 들어감)
             int.TryParse(textBox2.Text, out int age);
             c.age = age;
 
@@ -34,6 +36,32 @@ namespace CSharpStudy07_02
             MessageBox.Show(message);
 
             Cat.jump();
+
+            Cat c2 = new Cat();
+            c2.name = textBox3.Text;
+            try
+            {
+                //무조건 숫자 넣어야 함(Parse)
+                c2.age = int.Parse(textBox4.Text);
+            }
+            catch (Exception)
+            {
+                c2.age = 0;
+            }
+
+            c2.meow();
+            MessageBox.Show(c2.eat());
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cat c1 = new Cat();
+            c1.color = "red";
+            c1.name = "이동준";
+            c1.age = 34;
+            c1.meow();
+            c1.meow(5);
         }
     }
 }

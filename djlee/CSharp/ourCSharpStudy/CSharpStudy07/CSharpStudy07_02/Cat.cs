@@ -34,5 +34,15 @@ namespace CSharpStudy07_02
             System.Windows.Forms.MessageBox.Show("고양이 점프!!!");
         }
 
+        //매개변수가 없는 meow를 오버로딩한 메소드
+        //오버로딩 : 리턴타입은 관계없고
+        //매개변수가 다르면 메소드 이름이 같아도
+        //다른 메소드로 간주한다.
+        public void meow(int count)
+        {
+            System.Windows.Forms.MessageBox.Show
+                (color+"색 고양이가" +count+"번 야옹");
+        }
+
     }
 }
