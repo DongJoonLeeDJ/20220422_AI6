@@ -265,5 +265,29 @@ namespace ParkingManager
             if (DataManager.Cars.Count > 0)
                 dataGridView_parkingManager.DataSource = DataManager.Cars;
         }
+
+        //주차공간을 추가하거나 삭제하는 메소드
+        //parkingSpot - 공간번호
+        //command - 삭제 혹은 추가 내용
+        private void spot_add_delete(string parkingSpot, string command)
+        {
+            int.TryParse(parkingSpot, out int pSpot);
+            if(pSpot <=0)
+            {
+                WriteLog("주차 공간 번호는 0 이상의 숫자여야 합니다.");
+                MessageBox.Show("주차 공간 번호는 0 이상의 숫자여야 합니다.");
+                return;
+            }
+        }
+
+        private void button_add_Click(object sender, EventArgs e)
+        {
+            spot_add_delete(textBox_findNum.Text, "insert");
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            spot_add_delete(textBox_findNum.Text, "delete");
+        }
     }
 }

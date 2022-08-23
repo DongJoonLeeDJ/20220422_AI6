@@ -194,6 +194,7 @@
             this.button_delete.TabIndex = 12;
             this.button_delete.Text = "공간 삭제";
             this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // button_add
             // 
@@ -203,6 +204,7 @@
             this.button_add.TabIndex = 11;
             this.button_add.Text = "공간 추가";
             this.button_add.UseVisualStyleBackColor = true;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // button_find
             // 
