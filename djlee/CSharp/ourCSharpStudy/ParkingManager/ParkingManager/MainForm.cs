@@ -271,13 +271,34 @@ namespace ParkingManager
         //command - 삭제 혹은 추가 내용
         private void spot_add_delete(string parkingSpot, string command)
         {
+            //TryParse : int.Parse랑 try catch를 합친 것
+            //첫번째 매개변수가 "123" 이런식으로 숫자로 변환이 가능한 거면
+            //pSpot이라는 변수 선언하고, 그 변수에 숫자 넣음
+            //그리고 TryParse라는 이 메소드는 true를 리턴함
+            //만약에 공백이거나 엉뚱한 값을 입력하면 pSpot에 0이 들어가고
+            //TryParse라는 메소드는 false값을 리턴함
+
+            parkingSpot = parkingSpot.Trim(); //공백제거 후 진행
             int.TryParse(parkingSpot, out int pSpot);
             if(pSpot <=0)
             {
                 WriteLog("주차 공간 번호는 0 이상의 숫자여야 합니다.");
                 MessageBox.Show("주차 공간 번호는 0 이상의 숫자여야 합니다.");
-                return;
+                return; //이벤트(=메소드) 종료
             }
+            string contents = ""; //로그에 집어넣을 컨텐츠
+
+            //DataManager에 Save라는 메소드를 추가하는 데,
+            //기존에 만들었던 Save는 주차/출차용
+            //지금 만들 건 주차공간 추가/삭제용
+            bool check = DataManager.Save(command, parkingSpot, out contents);
+            //check 주차공간이 성공적으로 추가/삭제될 경우
+            //만약 주차공간이 이미 있는 데 추가하거나 없는 걸 삭제하려고 할 경우엔
+            //전체 갱신 버튼을 누를 필요 없음
+            if (check)
+                button_refresh.PerformClick(); //전체 갱신 버튼 누르기
+            MessageBox.Show(contents);
+            WriteLog(contents);
         }
 
         private void button_add_Click(object sender, EventArgs e)
