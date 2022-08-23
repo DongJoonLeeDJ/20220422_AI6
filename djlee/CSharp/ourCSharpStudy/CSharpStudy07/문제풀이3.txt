@@ -6,8 +6,8 @@ Cat c2 만들고
 이용해서 name과 age 정의함
 그 다음 c2도 마찬가지로 meow, eat 호출한다.
 
-3. cat 안에 meow 메소드를 만드는 데
-매개변수가 있음(int count)
+3. cat 안에 meow 메소드를 하나 더 만드는 데
+매개변수가 있음(int count) (=오버로딩)
 내용은 color색 고양이가 count번 야옹거렸다. 
 이런 메시지 박스가 뜨면 된다. 
 
