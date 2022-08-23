@@ -195,6 +195,8 @@ namespace ParkingManager
                 textBox_driverName.Text = car.driverName;
                 textBox_phoneNumber.Text = car.phoneNumber;
 
+                textBox_findNum.Text = car.ParkingSpot.ToString();
+
             }
             catch (Exception)
             {
