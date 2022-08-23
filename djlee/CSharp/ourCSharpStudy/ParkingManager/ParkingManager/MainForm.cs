@@ -226,9 +226,31 @@ namespace ParkingManager
             return parkedCarNum; //해당 공간에 차가 없으면 ""을 반환할 것
         }
 
+        //해당 공간 정보를 메시지 박스로 띄움
+        //여기선 select문 안 쓰고 그냥 Cars에서 바로 찾을 것
         private void button_find_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int parkingSpot = int.Parse(textBox_findNum.Text);
+                string parkingCar = lookUpParkingSpot(parkingSpot);
+                string contents = "";
+                if (parkingCar.Trim() != "")
+                {
+                    contents = $"주차공간 {parkingSpot}에 " +
+                        $"주차된 차는 {parkingCar}입니다.";
+                }
+                else
+                {
+                    contents = $"주차공간 {parkingSpot}에 차가 없습니다.";
+                }
+                WriteLog(contents);
+                MessageBox.Show(contents);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
