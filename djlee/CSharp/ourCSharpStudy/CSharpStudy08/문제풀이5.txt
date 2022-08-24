@@ -1,0 +1,23 @@
+1. Animal 클래스를 만든다.
+- Name, Age, Sleep() 메소드
+
+2. Dog, Cat, Hamster 클래스를 만든다.(Animal상속)
+Dog - hairColor 속성, bark() 메소드
+Cat - eyeColor 속성, meow()메소드
+Hamster - species 속성
+
+3. Cat을 상속받은 Lion, Tiger를 클래스를 만든다.
+Lion - 정수변수 countOfWife(암사자 수)
+CryOut() 메소드 추가
+
+Tiger - 무늬모양(string)
+Fight() 메소드 추가
+
+4. Animal 타입의 리스트를 만든다.
+
+5. Animal 2마리, Dog 2마리, Cat 2마리, Hamster 2마리
+Lion 2마리, Tiger 2마리를 만들어서 Animal 타입의 리스트에 넣는다.
+
+6. List에 있는 모든 동물들의 모든 메소드 다 호출한다.
+
+7. 1~6번 과정을 윈도우 폼으로 해보세요.
