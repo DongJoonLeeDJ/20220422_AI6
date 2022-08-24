@@ -8,8 +8,38 @@ namespace CSharpStudy08
 {
     public class Human
     {
+
+
+
+
+
         public string Name { get; set; }
         public int Age { get; set; }
+
+
+
+        public Human()
+        {
+            Console.WriteLine("인간 생성!!!");
+        }
+
+        public Human(int age)
+        {
+            this.Age = age;
+            Console.WriteLine(age+"살 인간 생성~~~");
+        }
+
+
+
+        //Human클래스 내부에서만 접근가능함
+        //다른 클래스에서는 접근이 안 됨
+        private string privacy { get; set; }
+
+        //Human을 상속한 클래스에서만 쓸 수 있다.
+        protected void Born()
+        {
+            Console.WriteLine("응애응애");
+        }
 
         public void Sleep()
         {

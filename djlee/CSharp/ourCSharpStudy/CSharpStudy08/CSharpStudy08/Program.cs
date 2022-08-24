@@ -120,10 +120,35 @@ namespace CSharpStudy08
             List<Human> people = new List<Human>()
             { h,h2,h3,s,s2,s3,w,w2,w3 };
 
+            people.Add(new Human());
+            people[9].Age = 10;
+            people[9].Name = "여대훈";
+            
+            people.Add(new Student());
+            people[10].Age = 40;
+            people[10].Name = "이주민";
+            (people[10] as Student).score = 50;
+
+            people.Add(new Worker());
+            people[11].Age = 50;
+            people[11].Name = "김홍근";
+            (people[11] as Worker).pay = 30;
+
+            ex1.Name = "예시1";
+            people.Add(ex1);
+            ex2.Name = "예시2";
+            people.Add(ex2);
+
+            Student stu = new Student();
+            stu.Name = "이유나";
+            stu.Age = 24;
+            stu.score = 100;
+            people.Add(stu);
+
             foreach(var item in people)
             {
                 item.Sleep();
-                if (item is Student)
+                if (item is Student) //인스턴스를 뭘로 만들었는가?
                     (item as Student).Study(1);
                 if (item is Worker)
                 {

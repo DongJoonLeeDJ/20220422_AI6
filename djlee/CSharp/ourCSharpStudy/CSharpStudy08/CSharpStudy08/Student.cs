@@ -19,6 +19,11 @@ namespace CSharpStudy08
 
         public void Study(int hour)
         {
+            //참고로 Human의 privacy는 
+            //상속받은 클래스일지라도 접근이 안 됨
+
+            //Human을 상속받았으므로 Born 쓸 수 있음
+            Born();
             Console.WriteLine(score+"점을 받았습니다.");
             Console.WriteLine(hour+"시간 만큼 공부합니다.");
         }

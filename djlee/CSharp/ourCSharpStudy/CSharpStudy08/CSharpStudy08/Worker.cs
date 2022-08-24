@@ -9,6 +9,19 @@ namespace CSharpStudy08
     public class Worker : Human
     {
         //Name, Age, Sleep이 이미 포함되어 있다.
+
+        public Worker()
+        {
+
+        }
+        
+        //조상클래스에 있는 생성자중에서
+        //매개변수가 있는 생성자를 명시적으로 호출
+        public Worker(int a) : base(a)
+       {
+            Console.WriteLine("나이:"+a);
+       }
+
         public int pay { get; set; }
         public int Work()
         {
