@@ -20,7 +20,7 @@ namespace CSharpStudy08
         public void Study(int hour)
         {
             Console.WriteLine(score+"점을 받았습니다.");
-            Console.WriteLine(hour+"만큼 공부합니다.");
+            Console.WriteLine(hour+"시간 만큼 공부합니다.");
         }
     }
 }
