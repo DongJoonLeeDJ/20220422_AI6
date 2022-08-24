@@ -76,6 +76,22 @@ namespace CSharpStudy08
             workers.Add(w);
             workers.Add(w2);
             workers.Add(w3);
+
+            foreach (var item in humen)
+            {
+                item.Sleep();
+            }
+            foreach (var item in students)
+            {
+                item.Study(10);
+                item.Sleep();
+            }
+            foreach(var item in workers)
+            {
+                int mymoney = item.Work();
+                Console.WriteLine(mymoney);
+                item.Sleep();
+            }
             
         }
     }
