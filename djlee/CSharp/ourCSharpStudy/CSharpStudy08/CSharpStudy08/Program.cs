@@ -157,6 +157,24 @@ namespace CSharpStudy08
                 }
             }
 
+            Worker www = new Worker(100);
+            www.Name = "김구";
+
+
+            Console.WriteLine(Human.count);
+            Console.WriteLine(Worker.count);
+            Console.WriteLine(Student.count);
+
+
+            h.sayhiHello();
+            s.sayHello();
+            w.sayHi();
+
+            Console.WriteLine(Human.countOfHello);
+            Console.WriteLine(Worker.countOfHello);
+            Console.WriteLine(Student.countOfHello);
+
+
         }
     }
 }

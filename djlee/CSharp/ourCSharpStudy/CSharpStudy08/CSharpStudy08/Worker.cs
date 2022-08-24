@@ -12,7 +12,12 @@ namespace CSharpStudy08
 
         public Worker()
         {
+            count++;
+        }
 
+        public void sayHi()
+        {
+            countOfHello++;
         }
         
         //조상클래스에 있는 생성자중에서

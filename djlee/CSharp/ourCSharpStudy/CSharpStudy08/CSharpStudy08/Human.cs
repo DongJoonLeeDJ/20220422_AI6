@@ -9,8 +9,13 @@ namespace CSharpStudy08
     public class Human
     {
 
+        public static int count = 0;
+        public static int countOfHello = 0;
 
-
+        public void sayhiHello()
+        {
+            countOfHello++;
+        }
 
 
         public string Name { get; set; }
@@ -20,6 +25,7 @@ namespace CSharpStudy08
 
         public Human()
         {
+            count++;
             Console.WriteLine("인간 생성!!!");
         }
 

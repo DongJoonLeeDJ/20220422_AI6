@@ -16,6 +16,15 @@ namespace CSharpStudy08
     public class Student : Human
     {
         public int score;
+        public Student()
+        {
+            count++;
+        }
+
+        public void sayHello()
+        {
+            countOfHello++;
+        }
 
         public void Study(int hour)
         {
