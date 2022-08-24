@@ -12,11 +12,21 @@ namespace CSharpStudy07
         {
             Dog ddd = new Dog();
             ddd.name = "컹컹";
+            ddd.beonho = "123456";
             ddd.bark();
+            Dog.species = "애완견";
+            
 
 
 
             Student s = new Student();
+            s.Score1 = 50; //Student 안에 있는
+            //score에다가 값을 준 것
+            Console.WriteLine(s.Score1);
+            //Student 안에 있는 score 값을 읽은 것
+
+
+
             //s.score = -1;
             //이에 대한 예외처리를 밖에서 해줘야 함
 

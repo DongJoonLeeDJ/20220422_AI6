@@ -24,7 +24,12 @@ namespace CSharpStudy07_02
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Cat c = new Cat();
+            //Cat() = 생성자
+            //new 키워드 + 생성자 = 인스턴스
+            //인스턴스 변수나 인스턴스 메소드는
+            //인스턴스를 만들어야지만 쓸 수 있다.
+
+            Cat c = new Cat();//new Cat(1,2);
             c.name = textBox1.Text;
             //숫자 아니어도 됨
             //대신 숫자 아닌 값 입력시 age에는 0이 들어감)
@@ -35,9 +40,12 @@ namespace CSharpStudy07_02
             string message = c.eat();
             MessageBox.Show(message);
 
+
+            //클래스 메소드는 인스턴스 없이 쓴다.
             Cat.jump();
 
             Cat c2 = new Cat();
+            
             c2.name = textBox3.Text;
             try
             {

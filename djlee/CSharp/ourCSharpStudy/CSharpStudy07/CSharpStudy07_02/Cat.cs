@@ -12,6 +12,28 @@ namespace CSharpStudy07_02
         public int age { get; set; }  
         public string color { get; set; }
 
+        //생성자
+        //이 생성자를 안 적으면 public Cat() {} 이거처럼
+        //아무 것도 없는 생성자가 암묵적으로 만들어져 있는 것!
+        public Cat()
+        {
+
+        }
+
+        //생성자도 오버로딩이 된다
+        //메소드처럼 매개변수에 따라서 여러 개의 생성자
+        //만들 수 있다.
+        public Cat(int age)
+        {
+            this.age = age;
+        }
+        public Cat(string name, int age, string color)
+        {
+            this.name = name;
+            this.age = age;
+            this.color = color;
+        }
+
         public void meow()
         {
             System.Windows.Forms.MessageBox.Show
