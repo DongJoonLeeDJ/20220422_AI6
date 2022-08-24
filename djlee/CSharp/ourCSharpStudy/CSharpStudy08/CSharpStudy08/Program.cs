@@ -33,6 +33,50 @@ namespace CSharpStudy08
             w.pay = 5000;
             money = w.Work(); //pay가 정해진 시점의 돈
             Console.WriteLine("money="+money);
+
+            Console.WriteLine("-----------------");
+
+            Human h2 = new Human();
+            h2.Age = 15;
+            h2.Name = "김남우";
+            Human h3 = new Human();
+            h3.Age = 16;
+            h3.Name = "김우기";
+
+            Student s2 = new Student();
+            s2.Name = "김세환";
+            s2.Age = 30;
+            s2.score = 90;
+            Student s3 = new Student();
+            s3.Name = "권건모";
+            s3.Age = 40;
+            s3.score = 80;
+
+            Worker w2 = new Worker();
+            w2.Name = "양명지";
+            w2.Age = 20;
+            w2.pay = 5000;
+
+            Worker w3 = new Worker();
+            w3.Name = "김여준";
+            w3.Age = 25;
+            w3.pay = 10000;
+
+            List<Human> humen = new List<Human>();
+            List<Student> students = new List<Student>();
+            List<Worker> workers = new List<Worker>();
+            humen.Add(h);
+            humen.Add(h2);
+            humen.Add(h3);
+
+            students.Add(s);
+            students.Add(s2);
+            students.Add(s3);
+
+            workers.Add(w);
+            workers.Add(w2);
+            workers.Add(w3);
+            
         }
     }
 }
