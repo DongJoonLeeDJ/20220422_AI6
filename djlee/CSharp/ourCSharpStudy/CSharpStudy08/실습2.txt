@@ -1,0 +1,22 @@
+1. Zoo_Console,
+Zoo_Winform의
+코드 구조를 파악하기
+D:\djlee\AI6\20220422_AI6\djlee\CSharp\ourCSharpStudy\CSharpStudy08
+
+2. Zoo_Winform에서
+Lion과 Tiger는 Cat의 자손이라
+메시지 박스창 버튼 누르면
+눈색깔도 같이 나오는 데(eyeColor)
+이거 Lion이랑  Tiger는 
+안 나오게 하기
+
+3. 지금은 for문 이용해서
+털색1, 털색2
+눈색깔 10 이렇게 나오는 데
+아래 2종류로 나오게 해보세요.
+     //털색 : 녹색, 파랑 (개)
+      //눈색 : 금색, 회색 (고양이)
+     //햄스터종류 : 시궁쥐, 골든햄스터(햄스터)
+hint 배열이나 List를 3개 더 만들어야 될 거다.
+
+
