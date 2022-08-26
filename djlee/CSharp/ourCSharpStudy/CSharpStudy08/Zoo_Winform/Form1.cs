@@ -168,5 +168,100 @@ namespace Zoo_Winform
             //단 털색 눈색은 저 2개만 있다고 가정한다.
             MessageBox.Show(contents);
         }
+
+        private void button_solve_Click(object sender, EventArgs e)
+        {
+            //모든 속성에 값들을 부여하고
+            //그 것을 한 번에 messageBox로 띄워보자.
+
+            List<string> hairs = new List<string>();
+            hairs.Add("녹색");
+            hairs.Add("파랑색");
+            List<string> eyes = new List<string>();
+            eyes.Add("금색");
+            eyes.Add("회색");
+            List<string> hams = new List<string>();
+            hams.Add("시궁쥐");
+            hams.Add("골든 햄스터");
+
+
+            string contents = "";
+            for (int i = 0; i < animals.Count; i++)
+            {
+                //끝에 호랑이 2마리는 이름이랑 나이 다 있다.(랑이, 랭이)
+                if (animals[i] is Tiger == false)
+                {
+                    animals[i].Name = "동물" + (i + 1);
+                    animals[i].Age = i;
+                }
+                if (animals[i] is Cat)
+                {
+                    //고양이에 대해서만 눈색깔 추가
+                    if (animals[i] is Lion == false && animals[i] is Tiger == false)
+                    {
+                        (animals[i] as Cat).eyeColor = eyes[0];
+                        eyes.RemoveAt(0); //하나씩 지워나감
+
+                    }
+                }
+                    //(animals[i] as Cat).eyeColor = "눈색깔" + (i + 1);
+
+                //item이 바뀌면 animals의 i번째도 값이 바뀜
+                var item = animals[i] as Hamster;
+                if (item != null) //3번!!!
+                {
+                    item.species = hams[0]; 
+                    hams.RemoveAt(0); //하나씩 지워나감
+                }//item.species = "햄스터종류" + (i + 1);
+
+                if (animals[i] is Dog)
+                {
+                    (animals[i] as Dog).hairColor = hairs[0];
+                    hairs.RemoveAt(0);//하나씩 지워나감
+                }
+                    //(animals[i] as Dog).hairColor = "털색깔" + (i + 1);
+
+                //사자의 countOfWife는 이미 값을 지정함
+                //(new Form에서)
+
+                contents += "이름:" + animals[i].Name + " ";
+                contents += animals[i].Age + "살 ";
+                if (animals[i] is Hamster)
+                    contents += (animals[i] as Hamster).species + " ";
+                if (animals[i] is Tiger)
+                    contents += (animals[i] as Tiger).pattern + "무늬 호랑이 ";
+                if (animals[i] is Lion)
+                {
+                    var temp = animals[i] as Lion;
+                    if (temp.countOfWife == 0)
+                        contents += "암사자 ";
+                    else
+                        contents += temp.countOfWife + "마리의 암사자와 함께하는 숫사자 ";
+                }
+
+                if (animals[i] is Dog)
+                    contents += (animals[i] as Dog).hairColor + "털색의 개 ";
+                if (animals[i] is Cat)
+                {
+                    //문제2 호랑이 사자들은 눈 색 안 나오게 하기
+                    if (animals[i] is Lion == false && animals[i] is Tiger == false)
+                        contents += (animals[i] as Cat).eyeColor + "눈색의 고양이 ";
+                }
+                contents += Environment.NewLine;//"\n"이랑 똑같은 거
+
+
+            }
+
+            //여기서 만약에 호랑이, 사자인 경우
+            //Cat이 가지고 있는 눈색깔 속성을 안 나타나게 하려면 어떻게 해야할까?
+
+
+            //그리고 지금처럼 털색1, 털색2가 아니라
+            //털색 : 녹색, 파랑
+            //눈색 : 금색, 회색
+            //이렇게 나타내고 싶다면 어떻게 코드를 짜야할까
+            //단 털색 눈색은 저 2개만 있다고 가정한다.
+            MessageBox.Show(contents);
+        }
     }
 }
