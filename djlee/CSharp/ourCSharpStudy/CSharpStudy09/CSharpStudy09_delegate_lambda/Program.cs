@@ -90,6 +90,12 @@ namespace CSharpStudy09_delegate_lambda
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("@@@@");
+            List<int> mynumbersList = all.ToList<int>();
+            foreach (var item in mynumbersList)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
