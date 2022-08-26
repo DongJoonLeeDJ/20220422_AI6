@@ -184,6 +184,19 @@ namespace Zoo_Winform
             hams.Add("시궁쥐");
             hams.Add("골든 햄스터");
 
+            List<string> names = new List<string>();
+            names.Add("호식이");
+            names.Add("둥식이");
+            names.Add("둥돌이");
+            names.Add("뗑돌이");
+            names.Add("메리");
+            names.Add("뿅뿅");
+            names.Add("챠챠");
+            names.Add("카카");
+            names.Add("펭핑");
+            names.Add("빙빙");
+
+
 
             string contents = "";
             for (int i = 0; i < animals.Count; i++)
@@ -191,7 +204,9 @@ namespace Zoo_Winform
                 //끝에 호랑이 2마리는 이름이랑 나이 다 있다.(랑이, 랭이)
                 if (animals[i] is Tiger == false)
                 {
-                    animals[i].Name = "동물" + (i + 1);
+                    //animals[i].Name = "동물" + (i + 1);
+                    animals[i].Name = names[0];
+                    names.RemoveAt(0);
                     animals[i].Age = i;
                 }
                 if (animals[i] is Cat)
