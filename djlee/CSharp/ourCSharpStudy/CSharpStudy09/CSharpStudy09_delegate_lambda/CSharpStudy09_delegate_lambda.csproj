@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B55BAD3-096C-4404-9B0B-B7E3EBF3E704}</ProjectGuid>
+    <ProjectGuid>{67F9C741-691F-4053-BA6B-EFB0A8476D4C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CSharpStudy09</RootNamespace>
-    <AssemblyName>CSharpStudy09</AssemblyName>
+    <RootNamespace>CSharpStudy09_delegate_lambda</RootNamespace>
+    <AssemblyName>CSharpStudy09_delegate_lambda</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,16 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="ElectricStudent.cs" />
-    <Compile Include="IFight.cs" />
-    <Compile Include="IPlay.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="SWStudent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

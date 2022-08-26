@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpStudy09
 {
-    public class Animal
+    public class ElectricStudent : Student
     {
-        public int Age { get; set; }
-        public virtual void Sleep()
+        public override void study()
         {
-            Console.WriteLine("쿨쿨 잡니다.");
+            Console.WriteLine("전기배선을 만든다.");
         }
     }
 }

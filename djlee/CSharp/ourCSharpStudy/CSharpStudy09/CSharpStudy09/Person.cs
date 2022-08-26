@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace CSharpStudy09
 {
-    public class Animal
+
+    //구조체는 class와 복사 형식이 다름
+    public struct Person
     {
         public int Age { get; set; }
-        public virtual void Sleep()
-        {
-            Console.WriteLine("쿨쿨 잡니다.");
-        }
     }
 }
