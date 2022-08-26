@@ -71,8 +71,8 @@ namespace CSharpStudy09_delegate_lambda
             //linq
             //list에서 원하는 걸 가져올 떄 sql 문법써서 가져옴
             var all = from item in input select item; //숫자 다 가져옴
-
-            
+            var powers = from item in input select item*item;
+            //powers : input안에 있는 값들의 제곱들을 저장함
             var odd = from item in input where item%2 == 1 select item; //홀수만 가져옴
             var even = from item in input where item % 2 == 0 select item; //짝수만 가져옴
             Console.WriteLine("---");
@@ -91,7 +91,7 @@ namespace CSharpStudy09_delegate_lambda
                 Console.WriteLine(item);
             }
             Console.WriteLine("@@@@");
-            List<int> mynumbersList = odd.ToList<int>();
+            List<int> mynumbersList = powers.ToList<int>();
             foreach (var item in mynumbersList)
             {
                 Console.WriteLine(item);
